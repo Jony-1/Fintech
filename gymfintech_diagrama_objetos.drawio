@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Diagrama de Componentes - GYMFINTECH" id="componentes-gymfintech">
+    <mxGraphModel dx="1024" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Frontends -->
+        <mxCell id="WebFE" value="Web Frontend" style="rounded;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="MobileFE" value="Mobile App" style="rounded;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- API Gateway -->
+        <mxCell id="APIGateway" value="API Gateway" style="rounded;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Backend Services -->
+        <mxCell id="AuthService" value="Auth Service" style="rounded;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="20" y="220" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="UserService" value="User Service" style="rounded;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="180" y="220" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ProfileService" value="Profile Service" style="rounded;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="220" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="MeasurementService" value="Measurement Service" style="rounded;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="20" y="320" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="AppointmentService" value="Appointment Service" style="rounded;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" vertex="1" parent="1">
+          <mxGeometry x="180" y="320" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="NotificationService" value="Notification Service" style="rounded;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="340" y="320" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="ReportingService" value="Reporting Service" style="rounded;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" vertex="1" parent="1">
+          <mxGeometry x="180" y="420" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="SensorAdapter" value="Sensor Adapter" style="rounded;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" vertex="1" parent="1">
+          <mxGeometry x="340" y="420" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Data Stores -->
+        <mxCell id="Database" value="Database" style="rounded;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="100" y="520" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="MessageBroker" value="Message Broker" style="rounded;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="300" y="520" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Conexiones -->
+        <mxCell id="e1" edge="1" parent="1" source="WebFE" target="APIGateway" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="MobileFE" target="APIGateway" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="APIGateway" target="AuthService" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="APIGateway" target="UserService" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="APIGateway" target="ProfileService" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="APIGateway" target="MeasurementService" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="APIGateway" target="AppointmentService" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="APIGateway" target="NotificationService" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="APIGateway" target="ReportingService" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="UserService" target="Database" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="ProfileService" target="Database" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="MeasurementService" target="Database" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="AppointmentService" target="Database" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="NotificationService" target="MessageBroker" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="ReportingService" target="Database" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="SensorAdapter" target="MeasurementService" style="endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
